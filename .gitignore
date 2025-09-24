@@ -4,3 +4,6 @@ server/
 build/
 out/
 *.iml
+.classpath
+.project
+.settings/
