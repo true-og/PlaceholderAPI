@@ -5,7 +5,7 @@ plugins {
     `maven-publish`
     id("eclipse")
     id("com.github.hierynomus.license") version "0.16.1"
-    id("com.gradleup.shadow") version "8.3.8"
+    id("com.gradleup.shadow") version "8.3.9"
 }
 
 group = "me.clip"
@@ -23,9 +23,8 @@ repositories {
 }
 
 dependencies {
-    implementation("org.bstats:bstats-bukkit:3.0.1")
     implementation("net.kyori:adventure-platform-bukkit:4.3.3")
-    compileOnly("dev.folia:folia-api:1.20.1-R0.1-SNAPSHOT")
+    compileOnly("dev.folia:folia-api:1.19.4-R0.1-SNAPSHOT")
     compileOnlyApi("org.jetbrains:annotations:23.0.0")
     testImplementation("org.openjdk.jmh:jmh-core:1.32")
     testImplementation("org.openjdk.jmh:jmh-generator-annprocess:1.32")
@@ -79,7 +78,6 @@ tasks {
 
     withType<ShadowJar> {
         archiveClassifier.set("")
-        relocate("org.bstats", "me.clip.placeholderapi.metrics")
         relocate("net.kyori", "me.clip.placeholderapi.libs.kyori")
         exclude("META-INF/versions/**")
     }

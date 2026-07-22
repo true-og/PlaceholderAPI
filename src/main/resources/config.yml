@@ -9,7 +9,7 @@
 # No placeholders are provided with this plugin by default.
 # Download placeholders: /papi ecloud
 check_updates: false
-cloud_enabled: true
+cloud_enabled: false
 cloud_sorting: name
 boolean:
   'true': 'yes'
